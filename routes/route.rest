@@ -1,1 +1,19 @@
 GET http://localhost:3000/customers
+
+###
+
+GET http://localhost:3000/customers/62335480fbd140b73ee0b05a
+
+###
+
+POST http://localhost:3000/customers
+Content-Type: application/json
+
+{
+    "name": "Teddy Omondi",
+    "email": "Teddyomondi001@gmail.com",
+    "phoneNo": "+254706271861",
+    "location": "Rongai"
+
+
+}

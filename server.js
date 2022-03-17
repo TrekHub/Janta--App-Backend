@@ -24,4 +24,8 @@ const customerRouter = require('./routes/customers');
 app.use('/customers', customerRouter)
 
 
+const serviceProvidersRouter = require('./routes/serviceProviders')
+app.use('/serviceProviders', serviceProvidersRouter )
+
+
 app.listen(3000, () => console.log("Server Started"));

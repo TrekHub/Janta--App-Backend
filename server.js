@@ -17,4 +17,11 @@ db.once('open', () => console.log('Connected to the database!!'));
 
 
 
+app.use(express.json())
+
+//Setting up the Router
+const customerRouter = require('./routes/customers');
+app.use('/customers', customerRouter)
+
+
 app.listen(3000, () => console.log("Server Started"));

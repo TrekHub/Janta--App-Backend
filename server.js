@@ -19,11 +19,11 @@ db.once('open', () => console.log('Connected to the database!!'));
 
 app.use(express.json())
 
-//Setting up the Router
+//Setting up the Router for Customer
 const customerRouter = require('./routes/customers');
 app.use('/customers', customerRouter)
 
-
+//Setting up the Router for Service Provider
 const serviceProvidersRouter = require('./routes/serviceProviders')
 app.use('/serviceProviders', serviceProvidersRouter )
 

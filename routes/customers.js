@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
         email: req.body.email,
         phoneNo: req.body.phoneNo,
         location: req.body.location
-
+    
     });
 
     try {
@@ -83,7 +83,7 @@ router.patch('/:id', getCustomerById, async (req, res) => {
 })
 
 
-//Delete a specific custome 
+//Delete a specific customer
 router.delete('/:id', getCustomerById, async (req, res) => {
     try {
         await res.customer.remove();

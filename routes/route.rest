@@ -10,10 +10,41 @@ POST http://localhost:3000/customers
 Content-Type: application/json
 
 {
-    "name": "Teddy Omondi",
+    "name": "Teddy Martin",
     "email": "Teddyomondi001@gmail.com",
     "phoneNo": "+254706271861",
     "location": "Rongai"
 
 
 }
+
+###
+
+GET  http://localhost:3000/serviceProviders
+
+###
+
+POST  http://localhost:3000/serviceProviders
+Content-Type: application/json
+
+{
+    "name": "Richard Mutinda",
+    "email": "Richard@gmail.com",
+    "phoneNo": "+254706271861",
+    "service": "Bodaboda",
+    "location": "Langata",
+    "availability": true
+
+
+}
+
+###
+
+GET  http://localhost:3000/serviceProviders/6236faa2e1ff933e3536d803
+
+
+
+
+
+
+

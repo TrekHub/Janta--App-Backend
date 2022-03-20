@@ -1,4 +1,5 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const Customer = require('../models/Customer');
 const router = express.Router();
 
@@ -28,7 +29,7 @@ router.get('/:id', getCustomerById, (req, res) => {
 
 
 //Create one customer endpoint
-router.post('/', async (req, res) => {
+router.post('/',  async (req, res) => {
     const customer = new Customer({
         name: req.body.name,
         email: req.body.email,
@@ -36,6 +37,7 @@ router.post('/', async (req, res) => {
         location: req.body.location
     
     });
+    
 
     try {
         const newCustomer = await customer.save();
@@ -121,6 +123,12 @@ async function getCustomerById(req, res, next) {
     }
     res.customer = customer;
     next();
+}
+
+function authVerification(req, res, next){
+
+    const bearerHeader = req.header['authorization'];
+
 }
 
 

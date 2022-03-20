@@ -7,7 +7,7 @@ const ServiceProvider = require('../models/ServiceProvider')
 router.get('/', async (req, res) => {
 
     try {
-        const serviceProviders = await new ServiceProvider.find();
+        const serviceProviders = await ServiceProvider.find();
         res.json(serviceProviders);
 
     } catch (error) {
